@@ -60,6 +60,18 @@ python3 /path/to/horizon-mods/native/tools/native.py check .   # apply + cargo c
 horizon-launcher native-build mixins/jade --trust-native-code  # build a playable game
 ```
 
+## Agent control
+
+The Horizon launcher ships an MCP server (`horizon-launcher mcp`, stdio) for
+driving the launcher and the game — see
+[playhorizon.dev/docs/agents](https://playhorizon.dev/docs/agents). For ZCode,
+add it to `~/.zcode/cli/config.json`:
+
+```json
+{ "mcp": { "servers": { "horizon": {
+    "command": "/usr/lib/horizon-launcher/horizon-launcher", "args": ["mcp"] } } } }
+```
+
 ## License
 
 MIT, like Jade.
