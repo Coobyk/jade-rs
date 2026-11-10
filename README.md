@@ -11,27 +11,34 @@ launcher builds it on that Nightly.
 
 ## What it shows
 
-A translucent box in a corner (top right by default) with, in order:
+A rounded, bordered tooltip centred at the top of the screen, as Java Jade
+draws it, with:
 
+- The target's item icon (its spawn egg for a mob, its bucket for water or
+  lava)
 - The target's name in your language (`block.<namespace>.<path>` /
   `entity.minecraft.<path>` in the language file, else the path in words)
-- Its registry id (`minecraft:iron_ore`)
-- Its coordinates (`12, 64, -4`), on by default
-- Its distance from you (`4.3 m`)
+- A row of hearts for a living entity
+- The mod that added it, in italic blue (`Minecraft` for vanilla)
+- Its registry id (`minecraft:iron_ore`) when advanced tooltips (F3+H) are on
+- Its coordinates and distance, when the details lines are on (`/jade coords`)
 
-The crosshair's order is the game's: an entity first, then a block, then a
-fluid. Players, guests and projectiles show as `Entity`.
+The box pops in and settles when the target changes and fades out as the
+crosshair moves off. The crosshair's order is the game's: an entity first,
+then a block, then a fluid. Players, guests and projectiles show as `Entity`.
 
 ## Controls
 
 - **Toggle key** — J by default, rebindable in Options > Mods > Jade
 - `/jade` — hide or show the box
-- `/jade coords` — hide or show the coordinates line
-- `/jade top_left` / `top_right` / `bottom_left` / `bottom_right` — move the box
+- `/jade coords` — hide or show the details lines (off by default, as Jade)
+- `/jade top` / `top_left` / `top_right` / `bottom_left` / `bottom_right` —
+  move the box (top, centred, by default)
 - `/jade help` — the list above
 
-The settings page (Options > Mods > Jade) has the shown, coordinates and
-position toggles. The box yields its corner to the debug screen (F3).
+The settings page (Options > Mods > Jade) has the shown, details and
+position toggles. A corner placement yields its corner to the debug screen
+(F3).
 
 ## Repository layout
 

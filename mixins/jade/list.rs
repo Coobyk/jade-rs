@@ -5,6 +5,6 @@ fn jade_listed(mods: &mut Vec<crate::game::native_hooks::NativeMod>) {
         id: m::ID.into(),
         title: format!("{} {}", m::NAME, m::VERSION),
         description: m::DESCRIPTION.into(),
-        keys: vec![["toggle".into(), "Toggle Jade".into(), "key.keyboard.j".into()]],
+        keys: vec![[m::TOGGLE_KEY_ID.into(), "Toggle Jade".into(), m::TOGGLE_KEY.into()]],
     });
 }
